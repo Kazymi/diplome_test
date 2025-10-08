@@ -9,8 +9,12 @@ public class ShopSystem : MonoBehaviour
     [SerializeField] private ShopSlot[] shopSlots;
     [SerializeField] private ShopSlot reloadSlot;
     [SerializeField] private ShopSystem shop;
+    [SerializeField] private DrawingCanvas canvas;
+    [SerializeField] private TriggerZone _nextRound;
+
     private void Awake()
     {
+        _nextRound.OnTriggerEnterCompleted+= EnterCompleted;
         reloadSlot.Initialize(reloadConfiguration);
         reloadSlot.OnPurchaseEvent += OnReloadPurchaseEvent;
         foreach (var shopSlot in shopSlots)
@@ -21,6 +25,22 @@ public class ShopSystem : MonoBehaviour
         }
     }
 
+    private void EnterCompleted()
+    {
+        _nextRound.transform.DOScale(0f, 0.5f).SetEase(Ease.OutBounce);
+        foreach (var slot in shopSlots)
+        {
+            if (slot)
+            {
+                slot.GetComponent<TwoObjectsAnimator>().HideSimply();
+            }
+        }
+        reloadSlot.GetComponent<TwoObjectsAnimator>().HideSimply();
+        FindObjectOfType<EnemySpawner>().Drop();
+        FindObjectOfType<GameManager>().StartGame();
+        Destroy(gameObject,1f);
+    }
+
     private void OnReloadPurchaseEvent(ShopSlot obj)
     {
         reloadSlot.GetComponent<TwoObjectsAnimator>().HideWithExplosion();
@@ -28,11 +48,11 @@ public class ShopSystem : MonoBehaviour
         {
             slot.GetComponent<TwoObjectsAnimator>().HideSimply();
         }
+
         DOVirtual.DelayedCall(1f, () =>
         {
             Destroy(gameObject);
             FindAnyObjectByType<EnemySpawner>().SpawnShop();
-
         });
     }
 
@@ -41,14 +61,14 @@ public class ShopSystem : MonoBehaviour
         reloadSlot.GetComponent<TwoObjectsAnimator>().HideSimply();
         foreach (var slot in shopSlots)
         {
-            Destroy(gameObject, 1f);
             if (slot == obj)
             {
+                if (slot.ShopConfiguration.BuyEvent == ShopBuyEvent.Pet)
+                {
+                    Instantiate(canvas);
+                }
+                Destroy(obj.gameObject, 1f);
                 slot.GetComponent<TwoObjectsAnimator>().HideWithExplosion();
-            }
-            else
-            {
-                slot.GetComponent<TwoObjectsAnimator>().HideSimply();
             }
         }
     }

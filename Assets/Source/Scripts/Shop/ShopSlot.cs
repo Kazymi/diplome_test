@@ -13,6 +13,7 @@ public class ShopSlot : MonoBehaviour
     private ShopConfiguration _shopConfiguration;
     public event Action<ShopSlot> OnPurchaseEvent;
 
+    public ShopConfiguration ShopConfiguration => _shopConfiguration;
     public void Initialize(ShopConfiguration shopConfiguration)
     {
         triggerZone.OnTriggerEnterCompleted += Purchase;

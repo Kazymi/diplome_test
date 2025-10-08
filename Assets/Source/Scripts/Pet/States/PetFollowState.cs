@@ -19,7 +19,7 @@ public class PetFollowState : State
         this.animatorController = animatorController;
         this.pet = pet;
         this.player = player;
-        this.spriteRenderer = pet.GetComponent<SpriteRenderer>();
+        this.spriteRenderer = pet.GetComponentInChildren<SpriteRenderer>();
     }
 
     public override void OnStateEnter()

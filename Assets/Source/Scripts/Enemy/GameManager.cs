@@ -8,6 +8,11 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
+        StartGame();
+    }
+
+    public void StartGame()
+    {
         StartCoroutine(SpawnEnemy());
         spawner.SetAmountEnemy(amountEnemy);
     }

@@ -16,7 +16,7 @@ public class PetChaseState : State
         this.animatorController = animatorController;
         this.pet = pet;
         this.target = target;
-        this.spriteRenderer = pet.GetComponent<SpriteRenderer>();
+        this.spriteRenderer = pet.GetComponentInChildren<SpriteRenderer>();
     }
 
     public void SetTarget(Transform target)

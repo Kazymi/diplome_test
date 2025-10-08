@@ -62,6 +62,8 @@ MonoBehaviour:
   - {fileID: 9067642890475298768}
   reloadSlot: {fileID: 4530485475200161076}
   shop: {fileID: 5724851138143990450}
+  canvas: {fileID: 6685964758799407437, guid: 46c163ba2c1cc764aa529ac2441e65f9, type: 3}
+  _nextRound: {fileID: 1858567996857518956}
 --- !u!1 &6179046835868554772
 GameObject:
   m_ObjectHideFlags: 0
@@ -492,6 +494,17 @@ PrefabInstance:
       addedObject: {fileID: 4759449129006739374}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1bc76f645188dce40b0013e81639191f, type: 3}
+--- !u!114 &1858567996857518956 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8679940347490176640, guid: 1bc76f645188dce40b0013e81639191f, type: 3}
+  m_PrefabInstance: {fileID: 7043527008577488364}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc7e56c01c77472b869f60c5c3a7851f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &3004645776227177726 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5191813732334276882, guid: 1bc76f645188dce40b0013e81639191f, type: 3}

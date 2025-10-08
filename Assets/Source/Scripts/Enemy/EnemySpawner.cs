@@ -16,6 +16,11 @@ public class EnemySpawner : MonoBehaviour
     private int AmounDeadEnemy;
     public int AmountEnemy;
 
+    public void Drop()
+    {
+        AmounDeadEnemy = 0;
+        AmountEnemy = 0;
+    }
     public void SpawnEnemy()
     {
         if (enemyPrefab == null || player == null) return;
