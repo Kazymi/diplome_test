@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c853a1d915824c7e8358d58891b08c0a, type: 3}
   m_Name: 3
   m_EditorClassIdentifier: 
-  Price: 250
+  Price: 1
   Sprite: {fileID: 4501425431741538082, guid: a3779e50bc9323e41946f7b5517235c6, type: 3}
   SpawnChance: 50
+  BuyEvent: 0
