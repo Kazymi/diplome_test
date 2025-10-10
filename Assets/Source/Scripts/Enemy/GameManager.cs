@@ -13,6 +13,7 @@ public class GameManager : MonoBehaviour
 
     public void StartGame()
     {
+        amountEnemy++;
         StartCoroutine(SpawnEnemy());
         spawner.SetAmountEnemy(amountEnemy);
     }

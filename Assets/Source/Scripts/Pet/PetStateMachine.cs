@@ -42,6 +42,7 @@ public class PetStateMachine : MonoBehaviour
 
         spawn.AddTransition(new StateTransition(idle,
             new TemporaryCondition(petAnimatorController.GetAnimationDuration(PetAnimationType.Spawn))));
+        idle.AddTransition(new StateTransition(follow, new TemporaryCondition(3f)));
         idle.AddTransition(new StateTransition(follow,
             new FuncCondition(() =>
                 player != null && Vector2.Distance(transform.position, player.position) >

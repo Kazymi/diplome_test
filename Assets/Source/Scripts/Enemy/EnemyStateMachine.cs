@@ -81,6 +81,7 @@ public class EnemyStateMachine : MonoBehaviour, IDamageable
 
     public void TakeDamage(int amount)
     {
+        if (CanTakeDamage == false) return;
         currentHealth -= amount;
         var hit = Instantiate(hitEffect, transform.position, Quaternion.identity);
         Destroy(hit, 3f);
