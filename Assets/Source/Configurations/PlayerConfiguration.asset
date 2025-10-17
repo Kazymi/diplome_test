@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: PlayerConfiguration
   m_EditorClassIdentifier: 
   <DefaultSpeed>k__BackingField: 4
+  <DefaultHealth>k__BackingField: 25
   <DefaultAttackSpeed>k__BackingField: 1
   <DefaultAttachRange>k__BackingField: 1.15
   <DefaultAttackDamage>k__BackingField: 3

@@ -1,11 +1,13 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 public class CharacterParamSystem : MonoBehaviour
 {
     [SerializeField] private PlayerConfiguration playerConfiguration;
-    
+
     // Абсолютные бонусы
     private float speedBonus;
+    public float healthBonus;
     private float attackSpeedBonus;
     private float attackRangeBonus;
     private int attackDamageBonus;
@@ -17,9 +19,10 @@ public class CharacterParamSystem : MonoBehaviour
     private int luckyBonus;
     private int moneyPerLevelBonus;
     private int luckyChestBonus;
-    
+
     // Процентные бонусы (в процентах, например 10 = +10%)
     private float speedPercentBonus;
+    public float healthPercentBonus;
     private float attackSpeedPercentBonus;
     private float attackRangePercentBonus;
     private float attackDamagePercentBonus;
@@ -31,21 +34,44 @@ public class CharacterParamSystem : MonoBehaviour
     private float luckyPercentBonus;
     private float moneyPerLevelPercentBonus;
     private float luckyChestPercentBonus;
-    
+
     // Геттеры с бонусами (базовое значение + абсолютный бонус) * (1 + процентный бонус/100)
     public float Speed => (playerConfiguration.DefaultSpeed + speedBonus) * (1 + speedPercentBonus / 100f);
-    public float AttackSpeed => (playerConfiguration.DefaultAttackSpeed + attackSpeedBonus) * (1 + attackSpeedPercentBonus / 100f);
-    public float AttackRange => (playerConfiguration.DefaultAttachRange + attackRangeBonus) * (1 + attackRangePercentBonus / 100f);
-    public int AttackDamage => Mathf.RoundToInt((playerConfiguration.DefaultAttackDamage + attackDamageBonus) * (1 + attackDamagePercentBonus / 100f));
-    public int AttachDamage => Mathf.RoundToInt((playerConfiguration.DefaultAttachDamage + attachDamageBonus) * (1 + attachDamagePercentBonus / 100f));
-    public int CritChance => Mathf.RoundToInt((playerConfiguration.DefaultCritChance + critChanceBonus) * (1 + critChancePercentBonus / 100f));
-    public int Armor => Mathf.RoundToInt((playerConfiguration.DefaultArmore + armorBonus) * (1 + armorPercentBonus / 100f));
+
+    public float AttackSpeed => (playerConfiguration.DefaultAttackSpeed + attackSpeedBonus) *
+                                (1 + attackSpeedPercentBonus / 100f);
+
+    public float AttackRange => (playerConfiguration.DefaultAttachRange + attackRangeBonus) *
+                                (1 + attackRangePercentBonus / 100f);
+
+    public int Health => Mathf.RoundToInt((playerConfiguration.DefaultHealth + healthBonus) *
+                                          (1 + healthPercentBonus / 100f));
+    public int AttackDamage => Mathf.RoundToInt((playerConfiguration.DefaultAttackDamage + attackDamageBonus) *
+                                                (1 + attackDamagePercentBonus / 100f));
+
+    public int AttachDamage => Mathf.RoundToInt((playerConfiguration.DefaultAttachDamage + attachDamageBonus) *
+                                                (1 + attachDamagePercentBonus / 100f));
+
+    public int CritChance => Mathf.RoundToInt((playerConfiguration.DefaultCritChance + critChanceBonus) *
+                                              (1 + critChancePercentBonus / 100f));
+
+    public int Armor =>
+        Mathf.RoundToInt((playerConfiguration.DefaultArmore + armorBonus) * (1 + armorPercentBonus / 100f));
+
     public int Miss => Mathf.RoundToInt((playerConfiguration.DefaultMiss + missBonus) * (1 + missPercentBonus / 100f));
-    public int Regeneration => Mathf.RoundToInt((playerConfiguration.DefaultRegeneration + regenerationBonus) * (1 + regenerationPercentBonus / 100f));
-    public int Lucky => Mathf.RoundToInt((playerConfiguration.DefaultLucky + luckyBonus) * (1 + luckyPercentBonus / 100f));
-    public int MoneyPerLevel => Mathf.RoundToInt((playerConfiguration.DefaultMoneyPerLevel + moneyPerLevelBonus) * (1 + moneyPerLevelPercentBonus / 100f));
-    public int LuckyChest => Mathf.RoundToInt((playerConfiguration.DefaultLuckyChest + luckyChestBonus) * (1 + luckyChestPercentBonus / 100f));
-    
+
+    public int Regeneration => Mathf.RoundToInt((playerConfiguration.DefaultRegeneration + regenerationBonus) *
+                                                (1 + regenerationPercentBonus / 100f));
+
+    public int Lucky =>
+        Mathf.RoundToInt((playerConfiguration.DefaultLucky + luckyBonus) * (1 + luckyPercentBonus / 100f));
+
+    public int MoneyPerLevel => Mathf.RoundToInt((playerConfiguration.DefaultMoneyPerLevel + moneyPerLevelBonus) *
+                                                 (1 + moneyPerLevelPercentBonus / 100f));
+
+    public int LuckyChest => Mathf.RoundToInt((playerConfiguration.DefaultLuckyChest + luckyChestBonus) *
+                                              (1 + luckyChestPercentBonus / 100f));
+
     // Методы для добавления абсолютных бонусов
     public void AddSpeedBonus(float bonus) => speedBonus += bonus;
     public void AddAttackSpeedBonus(float bonus) => attackSpeedBonus += bonus;
@@ -59,7 +85,7 @@ public class CharacterParamSystem : MonoBehaviour
     public void AddLuckyBonus(int bonus) => luckyBonus += bonus;
     public void AddMoneyPerLevelBonus(int bonus) => moneyPerLevelBonus += bonus;
     public void AddLuckyChestBonus(int bonus) => luckyChestBonus += bonus;
-    
+
     // Методы для добавления процентных бонусов
     public void AddSpeedPercentBonus(float percent) => speedPercentBonus += percent;
     public void AddAttackSpeedPercentBonus(float percent) => attackSpeedPercentBonus += percent;
@@ -73,19 +99,19 @@ public class CharacterParamSystem : MonoBehaviour
     public void AddLuckyPercentBonus(float percent) => luckyPercentBonus += percent;
     public void AddMoneyPerLevelPercentBonus(float percent) => moneyPerLevelPercentBonus += percent;
     public void AddLuckyChestPercentBonus(float percent) => luckyChestPercentBonus += percent;
-    
+
     // Методы для сброса всех бонусов
     public void ResetAllBonuses()
     {
         // Сброс абсолютных бонусов
         speedBonus = attackSpeedBonus = attackRangeBonus = 0f;
-        attackDamageBonus = attachDamageBonus = critChanceBonus = armorBonus = 
+        attackDamageBonus = attachDamageBonus = critChanceBonus = armorBonus =
             missBonus = regenerationBonus = luckyBonus = moneyPerLevelBonus = luckyChestBonus = 0;
-        
+
         // Сброс процентных бонусов
-        speedPercentBonus = attackSpeedPercentBonus = attackRangePercentBonus = 
-            attackDamagePercentBonus = attachDamagePercentBonus = critChancePercentBonus = 
-                armorPercentBonus = missPercentBonus = regenerationPercentBonus = 
+        speedPercentBonus = attackSpeedPercentBonus = attackRangePercentBonus =
+            attackDamagePercentBonus = attachDamagePercentBonus = critChancePercentBonus =
+                armorPercentBonus = missPercentBonus = regenerationPercentBonus =
                     luckyPercentBonus = moneyPerLevelPercentBonus = luckyChestPercentBonus = 0f;
     }
 }

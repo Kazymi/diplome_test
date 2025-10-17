@@ -13,6 +13,8 @@ MonoBehaviour:
   m_Name: New Enemy Configuration
   m_EditorClassIdentifier: 
   MoveSpeed: 2.5
-  Damage: 10
+  Damage: 5
   AttackRange: 0.57
   AttackCooldown: 0.8
+  Health: 10
+  DropChance: 50

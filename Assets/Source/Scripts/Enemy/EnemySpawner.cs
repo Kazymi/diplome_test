@@ -12,61 +12,66 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] private Transform player;
     [SerializeField] private int maxTries = 30;
     [SerializeField] private ShopSystem shopSystem;
-
-    private int AmounDeadEnemy;
-    public int AmountEnemy;
+    private int spawnIndex = 0;
+    [SerializeField] private float lateralJitter = 1f;
 
     public void Drop()
     {
-        AmounDeadEnemy = 0;
-        AmountEnemy = 0;
     }
+
     public void SpawnEnemy()
     {
         if (enemyPrefab == null || player == null) return;
-        Vector2 spawnPosition = GetValidSpawnPosition();
+        Vector2 spawnPosition = GetDirectionalSpawnPosition();
         var enemy = Instantiate(enemyPrefab, spawnPosition, Quaternion.identity);
         var enemyState = enemy.GetComponent<EnemyStateMachine>();
         enemyState.Initialize(player);
-        enemyState.OnEnemyDead += OnEnemyDead;
-    }
-
-    public void SetAmountEnemy(int amount)
-    {
-        AmountEnemy = amount;
     }
 
     public void SpawnShop()
     {
         Instantiate(shopSystem.gameObject, player.position, Quaternion.identity);
     }
-    private void OnEnemyDead()
-    {
-        AmounDeadEnemy++;
-        if (AmounDeadEnemy >= AmountEnemy)
-        {
-            foreach (var coinPickaper in FindObjectsByType<CoinPickaper>(FindObjectsSortMode.None)
-                         .Where(t => t.IsPickup == false).ToArray())
-            {
-                coinPickaper.transform.DOMove(player.transform.position, 1f);
-            }
 
-            DOVirtual.DelayedCall(1f, () => Instantiate(shopSystem.gameObject, player.position, Quaternion.identity));
-        }
-    }
-
-    private Vector2 GetValidSpawnPosition()
+    private Vector2 GetDirectionalSpawnPosition()
     {
-        for (int i = 0; i < maxTries; i++)
+        Vector2 center = transform.position;
+        Vector2 dir;
+
+        switch (spawnIndex % 4)
         {
-            Vector2 randomPos = (Vector2)transform.position + Random.insideUnitCircle * spawnRadius;
-            if (Vector2.Distance(randomPos, player.position) >= minDistanceToPlayer)
-            {
-                return randomPos;
-            }
+            case 0:
+                dir = Vector2.left;
+                break; // слева
+            case 1:
+                dir = Vector2.right;
+                break; // справа
+            case 2:
+                dir = Vector2.up;
+                break; // сверху
+            default:
+                dir = Vector2.down;
+                break; // снизу
         }
 
-        return (Vector2)transform.position + (Random.insideUnitCircle.normalized * spawnRadius);
+        // перпендикуляр для небольшого смещения (чтобы позиции не были абсолютно одинаковыми)
+        Vector2 perp = new Vector2(-dir.y, dir.x);
+        float jitter = Random.Range(-lateralJitter, lateralJitter);
+
+        Vector2 spawnPos = center + dir * spawnRadius + perp * jitter;
+
+        // увеличиваем индекс для следующего спавна (чтобы цикл продолжался)
+        spawnIndex = (spawnIndex + 1) % 4;
+
+        // если случайно получившаяся позиция слишком близко к игроку — сдвинем её на minDistanceToPlayer от игрока
+        if (player != null && Vector2.Distance(spawnPos, player.position) < minDistanceToPlayer)
+        {
+            Vector2 fromPlayer = (spawnPos - (Vector2)player.position).normalized;
+            if (fromPlayer == Vector2.zero) fromPlayer = dir; // защита на случай совпадения точек
+            spawnPos = (Vector2)player.position + fromPlayer * minDistanceToPlayer;
+        }
+
+        return spawnPos;
     }
 
     private void OnDrawGizmosSelected()

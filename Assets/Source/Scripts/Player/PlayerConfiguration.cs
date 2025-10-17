@@ -4,6 +4,7 @@
 public class PlayerConfiguration : ScriptableObject
 {
     [field: SerializeField] public float DefaultSpeed { get; private set; }
+    [field: SerializeField] public float DefaultHealth { get; private set; }
     [field: SerializeField] public float DefaultAttackSpeed { get; private set; }
     [field: SerializeField] public float DefaultAttachRange { get; private set; }
     [field: SerializeField] public int DefaultAttackDamage { get; private set; }

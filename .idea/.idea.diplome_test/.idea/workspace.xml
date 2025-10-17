@@ -4,7 +4,29 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4d51e888-086c-448a-b2b0-e59a5fd3be69" name="Changes" comment="" />
+    <list default="true" id="4d51e888-086c-448a-b2b0-e59a5fd3be69" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.diplome_test/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.diplome_test/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dark fantasy - popular enemies- Free Sample/Skeleton/Animations/Skeleton_Attack_2.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Dark fantasy - popular enemies- Free Sample/Skeleton/Animations/Skeleton_Attack_2.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dark fantasy - popular enemies- Free Sample/Skeleton/Animations/Skeleton_Walking.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Dark fantasy - popular enemies- Free Sample/Skeleton/Animations/Skeleton_Walking.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dark fantasy - popular enemies- Free Sample/Skeleton/Animations/Spawn.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Dark fantasy - popular enemies- Free Sample/Skeleton/Animations/Spawn.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Epic Toon FX/Textures/Symbols/162cd5563258a06.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Epic Toon FX/Textures/Symbols/162cd5563258a06.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Epic Toon FX/Textures/Symbols/162cd5563258a06.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Epic Toon FX/Textures/Symbols/162cd5563258a06.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Hide.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Hide.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Nine Pines Animation/2D Character Sprite Animation - Penguin/sprites/Player.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Nine Pines Animation/2D Character Sprite Animation - Penguin/sprites/Player.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Animation/Walk.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Animation/Walk.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Configurations/New Enemy Configuration.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Configurations/New Enemy Configuration.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Configurations/PlayerConfiguration.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Configurations/PlayerConfiguration.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Prefab/Coin 1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Prefab/Coin 1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Prefab/SlotObject.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Prefab/SlotObject.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Scenes/SampleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Scripts/Enemy/EnemySpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Scripts/Enemy/EnemySpawner.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Scripts/Enemy/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Scripts/Enemy/GameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Scripts/Player/CharacterParamSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Scripts/Player/CharacterParamSystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Scripts/Player/PlayerConfiguration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Scripts/Player/PlayerConfiguration.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -15,27 +37,29 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Source/Scripts/DrawingCanvas.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Source/Scripts/Enemy/EnemyAttack.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@529b01454a55/Runtime/UGUI/UI/Core/Graphic.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 4
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
   <component name="ProjectId" id="33nVBknq9mAiT3EZcr06uzKthGB" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\6000.0.55f1\Editor\Unity.exe" />
@@ -83,6 +107,9 @@
       <option name="presentableId" value="Default" />
       <updated>1759952690009</updated>
       <workItem from="1759952691071" duration="2618000" />
+      <workItem from="1760034714420" duration="2964000" />
+      <workItem from="1760386583788" duration="2360000" />
+      <workItem from="1760471822570" duration="2316000" />
     </task>
     <servers />
   </component>
