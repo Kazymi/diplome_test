@@ -7,7 +7,7 @@ public class CharacterParamSystem : MonoBehaviour
 
     // Абсолютные бонусы
     private float speedBonus;
-    public float healthBonus;
+    private float healthBonus;
     private float attackSpeedBonus;
     private float attackRangeBonus;
     private int attackDamageBonus;
@@ -22,7 +22,7 @@ public class CharacterParamSystem : MonoBehaviour
 
     // Процентные бонусы (в процентах, например 10 = +10%)
     private float speedPercentBonus;
-    public float healthPercentBonus;
+    private float healthPercentBonus;
     private float attackSpeedPercentBonus;
     private float attackRangePercentBonus;
     private float attackDamagePercentBonus;
@@ -99,6 +99,8 @@ public class CharacterParamSystem : MonoBehaviour
     public void AddLuckyPercentBonus(float percent) => luckyPercentBonus += percent;
     public void AddMoneyPerLevelPercentBonus(float percent) => moneyPerLevelPercentBonus += percent;
     public void AddLuckyChestPercentBonus(float percent) => luckyChestPercentBonus += percent;
+    public void AddHealthBonus(float bonus) => healthBonus += bonus;
+    public void AddHealthPercentBonus(float percent) => healthPercentBonus += percent;
 
     // Методы для сброса всех бонусов
     public void ResetAllBonuses()

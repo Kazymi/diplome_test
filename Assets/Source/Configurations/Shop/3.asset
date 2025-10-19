@@ -16,3 +16,4 @@ MonoBehaviour:
   Sprite: {fileID: 4501425431741538082, guid: a3779e50bc9323e41946f7b5517235c6, type: 3}
   SpawnChance: 50
   BuyEvent: 0
+  Artifact: {fileID: 11400000, guid: 9f8bf3e0eea9f594c877ac7d4654a88f, type: 2}

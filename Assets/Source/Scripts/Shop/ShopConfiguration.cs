@@ -7,6 +7,7 @@ public class ShopConfiguration : ScriptableObject
     public Sprite Sprite;
     [Range(0, 100)] public int SpawnChance = 50;
     public ShopBuyEvent BuyEvent;
+    public ArtifactConfiguration Artifact; // Артефакт, который получается при покупке
 }
 
 public enum ShopBuyEvent

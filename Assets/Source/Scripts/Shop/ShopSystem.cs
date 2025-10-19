@@ -11,11 +11,13 @@ public class ShopSystem : MonoBehaviour
     [SerializeField] private ShopSystem shop;
     [SerializeField] private DrawingCanvas canvas;
     [SerializeField] private TriggerZone _nextRound;
+    [SerializeField] private ArtifactManager artifactManager;
 
     private bool isDestroy;
 
     private void Awake()
     {
+        artifactManager = FindObjectOfType<ArtifactManager>();
         _nextRound.OnTriggerEnterCompleted += EnterCompleted;
         reloadSlot.Initialize(reloadConfiguration);
         reloadSlot.OnPurchaseEvent += OnReloadPurchaseEvent;
@@ -71,9 +73,17 @@ public class ShopSystem : MonoBehaviour
         {
             if (slot == obj)
             {
-                if (slot.ShopConfiguration.BuyEvent == ShopBuyEvent.Pet)
+                // Применяем артефакт, если он есть
+                if (slot.ShopConfiguration.Artifact != null && artifactManager != null)
                 {
-                    Instantiate(canvas);
+                    artifactManager.AddArtifact(slot.ShopConfiguration.Artifact);
+                }
+                else
+                {
+                    if (slot.ShopConfiguration.BuyEvent == ShopBuyEvent.Pet)
+                    {
+                        Instantiate(canvas);
+                    }
                 }
 
                 Destroy(obj.gameObject, 1f);

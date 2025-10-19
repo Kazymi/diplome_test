@@ -17,7 +17,7 @@ MonoBehaviour:
   <DefaultAttackSpeed>k__BackingField: 1
   <DefaultAttachRange>k__BackingField: 1.15
   <DefaultAttackDamage>k__BackingField: 3
-  <DefaultAttachDamage>k__BackingField: 3
+  <DefaultAttachDamage>k__BackingField: 9
   <DefaultCritChance>k__BackingField: 0
   <DefaultArmore>k__BackingField: 0
   <DefaultMiss>k__BackingField: 0
