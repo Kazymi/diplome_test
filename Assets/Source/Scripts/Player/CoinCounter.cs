@@ -7,11 +7,11 @@ public class CoinCounter : MonoBehaviour
     public static CoinCounter Instance;
 
     [Header("UI References")] [SerializeField]
-    private RectTransform coinIconUI; // Иконка монетки в HUD
+    private RectTransform coinIconUI; 
 
-    [SerializeField] private TMP_Text coinText; // Текст количества монет
-    [SerializeField] private Canvas mainCanvas; // Тот Canvas, где летает монета
-    [SerializeField] private RectTransform coinPrefabUI; // Префаб UI монеты (Image)
+    [SerializeField] private TMP_Text[] coinText;
+    [SerializeField] private Canvas mainCanvas; 
+    [SerializeField] private RectTransform coinPrefabUI;
 
     [Header("Animation Settings")] [SerializeField]
     private float flyDuration = 0.6f;
@@ -32,11 +32,14 @@ public class CoinCounter : MonoBehaviour
     public void ReduceCoinCount(int amount)
     {
         coinCount -= amount;
-        coinText.text = coinCount.ToString();
+        foreach (var text in coinText)
+        {
+            text.text = coinCount.ToString();   
+        }
         coinIconUI.DOPunchScale(Vector3.one * (punchScale - 1f), punchDuration, 1, 0.5f);
     }
 
-    public void SpawnFlyingCoin(Vector3 worldPos)
+    public void SpawnFlyingCoin(Vector3 worldPos, int amount = 1)
     {
         RectTransform flyingCoin = Instantiate(coinPrefabUI, mainCanvas.transform);
         flyingCoin.gameObject.SetActive(true);
@@ -48,22 +51,27 @@ public class CoinCounter : MonoBehaviour
             out Vector2 localPos
         );
         flyingCoin.anchoredPosition = localPos;
-
         flyingCoin.DOMove(coinIconUI.transform.position, flyDuration)
             .SetEase(flyEase)
             .OnComplete(() =>
             {
                 Destroy(flyingCoin.gameObject);
-                AddCoin();
+                AddCoin(amount);
             });
     }
 
-    private void AddCoin()
+    private void AddCoin(int amount)
     {
-        coinCount++;
-        coinText.text = coinCount.ToString();
+        coinCount += amount;
+        foreach (var text in coinText)
+        {
+            text.text = coinCount.ToString();   
+        }
 
         // Анимация "прыжка" иконки
-        coinIconUI.DOPunchScale(Vector3.one * (punchScale - 1f), punchDuration, 1, 0.5f);
+        coinIconUI.DOPunchScale(Vector3.one * (punchScale - 1f), punchDuration, 1, 0.5f).OnComplete(() =>
+        {
+            coinIconUI.transform.localScale= Vector3.one;
+        });
     }
 }

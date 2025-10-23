@@ -13,15 +13,18 @@ MonoBehaviour:
   m_Name: PlayerConfiguration
   m_EditorClassIdentifier: 
   <DefaultSpeed>k__BackingField: 4
+  <DefaultProjectileSpeed>k__BackingField: 10
+  <DefaultSpawnProjectileCooldown>k__BackingField: 2
+  <DefaultProjectileAmount>k__BackingField: 1
   <DefaultHealth>k__BackingField: 25
   <DefaultAttackSpeed>k__BackingField: 1
-  <DefaultAttachRange>k__BackingField: 1.15
+  <DefaultAttachRange>k__BackingField: 2
   <DefaultAttackDamage>k__BackingField: 3
   <DefaultAttachDamage>k__BackingField: 9
-  <DefaultCritChance>k__BackingField: 0
+  <DefaultCritChance>k__BackingField: 10
   <DefaultArmore>k__BackingField: 0
   <DefaultMiss>k__BackingField: 0
   <DefaultRegeneration>k__BackingField: 0
   <DefaultLucky>k__BackingField: 0
   <DefaultMoneyPerLevel>k__BackingField: 0
-  <DefaultLuckyChest>k__BackingField: 0
+  <DefaultLuckyChest>k__BackingField: 25

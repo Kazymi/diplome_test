@@ -117,8 +117,7 @@ public class ArtifactManager : MonoBehaviour
                 break;
                 
             case ArtifactEffectType.PlayerHealth:
-                if (effect.IsPercentage)
-                    characterParamSystem.AddHealthPercentBonus(effect.Value);
+                if (effect.IsPercentage) characterParamSystem.AddHealthPercentBonus(effect.Value);
                 else
                     characterParamSystem.AddHealthBonus(effect.Value);
                 break;

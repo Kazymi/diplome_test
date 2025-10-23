@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Price: 1
   Sprite: {fileID: -482517075680950574, guid: a22685f337eca7e44bb09d1c809c50fb, type: 3}
-  SpawnChance: 50
+  SpawnChance: 10
   BuyEvent: 0
   Artifact: {fileID: 11400000, guid: b019b1cb8d890ee4d983e6bff3ca19cd, type: 2}

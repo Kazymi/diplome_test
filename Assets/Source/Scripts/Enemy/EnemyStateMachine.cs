@@ -12,6 +12,7 @@ public class EnemyStateMachine : MonoBehaviour, IDamageable
     [SerializeField] private BackflipObject flipObject;
     [SerializeField] private GameObject hitEffect;
     [SerializeField] private GameObject droppedLoot;
+    [SerializeField] private GameObject chest;
 
     private Transform player;
     private StateMachine.StateMachine stateMachine;
@@ -19,12 +20,14 @@ public class EnemyStateMachine : MonoBehaviour, IDamageable
     private EnemyGetHitState flip;
     private int currentHealth;
     private EnemyAttackState enemyAttackState;
+    private CharacterParamSystem characterParamSystem;
 
     public event Action OnEnemyDead;
     public Transform Target => player;
 
-    public void Initialize(Transform player)
+    public void Initialize(Transform player, CharacterParamSystem characterParamSystem)
     {
+        this.characterParamSystem = characterParamSystem;
         this.player = player;
         currentHealth = enemyConfiguration.Health;
         InitializeStateMachine();
@@ -79,25 +82,45 @@ public class EnemyStateMachine : MonoBehaviour, IDamageable
 
     public bool CanTakeDamage { get; private set; }
 
-    public void TakeDamage(int amount)
+    public void TakeDamage(int amount , bool isPermanent = false)
     {
+        if (isPermanent)
+        {
+            OnEnemyDead?.Invoke();
+            Destroy(gameObject);
+            return;
+        }
         if (CanTakeDamage == false) return;
+        var isCrit = characterParamSystem.CritChance > Random.Range(0,100);
+        if (isCrit)
+        {
+            amount *= 2;
+        }
         currentHealth -= amount;
         var hit = Instantiate(hitEffect, transform.position, Quaternion.identity);
         Destroy(hit, 3f);
-        DamagePopupSpawner.Instance.Show(transform.position, amount);
+        DamagePopupSpawner.Instance.Show(transform.position, amount, isCrit ? Color.red : Color.white);
         stateMachine.SetState(flip);
         if (currentHealth <= 0)
         {
             CanTakeDamage = false;
             stateMachine.SetState(new State());
             enemyAnimatorController.SetTrigger(EnemyAnimationType.Dead);
-            DOVirtual.DelayedCall(0.4f, () =>
+
+            DOVirtual.DelayedCall(0.2f, () =>
             {
                 if (Random.Range(0, 100) > enemyConfiguration.DropChance)
                 {
                     Instantiate(droppedLoot, transform.position, Quaternion.identity);
                 }
+
+                if (Random.Range(0, 100) < characterParamSystem.LuckyChest)
+                {
+                    Instantiate(chest, transform.position, Quaternion.identity);
+                }
+            });
+            DOVirtual.DelayedCall(0.4f, () =>
+            {
                 OnEnemyDead?.Invoke();
                 Destroy(gameObject);
             });

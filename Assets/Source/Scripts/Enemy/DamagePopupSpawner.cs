@@ -20,11 +20,9 @@ public class DamagePopupSpawner : MonoBehaviour
     public void Show(Vector3 position, int damage, Color? color = null)
     {
         if (damagePopupPrefab == null) return;
-
         var popupObj = Instantiate(damagePopupPrefab, position, Quaternion.identity);
         var popup = popupObj.GetComponent<DamagePopup>();
         popup.transform.localScale = new Vector3(0.01f, 0.01f, 0.01f);
-        if (popup != null)
-            popup.Setup(damage, color ?? Color.white);
+        if (popup != null) popup.Setup(damage, color ?? Color.white);
     }
 }

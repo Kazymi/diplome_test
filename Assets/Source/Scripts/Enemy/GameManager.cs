@@ -17,6 +17,8 @@ public class GameManager : MonoBehaviour
     [Header("Animation Settings")] [SerializeField]
     private float fadeDuration = 0.5f;
 
+    private int currentLevel;
+
     [SerializeField] private float waveDisplayTime = 1.5f;
     private Tween currentTween;
 
@@ -24,7 +26,7 @@ public class GameManager : MonoBehaviour
     {
         waveText.alpha = 0f;
         timerText.alpha = 0f;
-        StartGame();
+      
     }
 
     public void StartWave(int waveNumber)
@@ -73,7 +75,8 @@ public class GameManager : MonoBehaviour
 
     public void StartGame()
     {
-        StartWave(1);
+        currentLevel++;
+        StartWave(currentLevel);
     }
 
     private IEnumerator SpawnEnemy()
@@ -97,7 +100,7 @@ public class GameManager : MonoBehaviour
         StopAllCoroutines();
         foreach (var enemyState in FindObjectsByType<EnemyStateMachine>(FindObjectsSortMode.None))
         {
-            enemyState.TakeDamage(1000);
+            enemyState.TakeDamage(1000,true);
         }
         spawner.SpawnShop();
     }

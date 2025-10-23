@@ -5,77 +5,40 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4d51e888-086c-448a-b2b0-e59a5fd3be69" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Configurations/Artefacts.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Configurations/Artefacts/1.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Configurations/Artefacts/1.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Configurations/Artefacts/10.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Configurations/Artefacts/10.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Configurations/Artefacts/11.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Configurations/Artefacts/11.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Configurations/Artefacts/12.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Configurations/Artefacts/12.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Configurations/Artefacts/13.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Configurations/Artefacts/13.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Configurations/Artefacts/2.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Configurations/Artefacts/2.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Configurations/Artefacts/3.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Configurations/Artefacts/3.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Configurations/Artefacts/4.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Configurations/Artefacts/4.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Configurations/Artefacts/5.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Configurations/Artefacts/5.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Configurations/Artefacts/6.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Configurations/Artefacts/6.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Configurations/Artefacts/7.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Configurations/Artefacts/7.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Configurations/Artefacts/8.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Configurations/Artefacts/8.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Configurations/Artefacts/9.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Configurations/Artefacts/9.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Scripts/Artifacts.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Scripts/Artifacts/ArtifactConfiguration.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Scripts/Artifacts/ArtifactConfiguration.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Scripts/Artifacts/ArtifactCreator.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Scripts/Artifacts/ArtifactCreator.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Scripts/Artifacts/ArtifactEffect.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Scripts/Artifacts/ArtifactEffect.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Scripts/Artifacts/ArtifactExample.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Scripts/Artifacts/ArtifactExample.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Scripts/Artifacts/ArtifactFileCreator.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Scripts/Artifacts/ArtifactFileCreator.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Scripts/Artifacts/ArtifactManager.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Scripts/Artifacts/ArtifactManager.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Scripts/Artifacts/ArtifactPresets.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Scripts/Artifacts/ArtifactPresets.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Scripts/Shop/ShopArtifactPresets.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Scripts/Shop/ShopArtifactPresets.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.diplome_test/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.diplome_test/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Epic Toon FX/Materials/Basics/gradient_horizontal_ADD.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Epic Toon FX/Materials/Basics/gradient_horizontal_ADD.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Epic Toon FX/Materials/Basics/lasergradient_AB.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Epic Toon FX/Materials/Basics/lasergradient_AB.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Epic Toon FX/Materials/Misc/Cards/cardglow07_ADD.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Epic Toon FX/Materials/Misc/Cards/cardglow07_ADD.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Epic Toon FX/Materials/Misc/Portals/portal_stripes_green_ADD.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Epic Toon FX/Materials/Misc/Portals/portal_stripes_green_ADD.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Epic Toon FX/Materials/Misc/Portals/portal_stripes_purple_ADD.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Epic Toon FX/Materials/Misc/Portals/portal_stripes_purple_ADD.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Epic Toon FX/Prefabs/Interactive/Cards/CardglowType01.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Epic Toon FX/Prefabs/Interactive/Cards/CardglowType01.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Epic Toon FX/Prefabs/Interactive/Portals/SimplePortal/SimplePortalGold.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Epic Toon FX/Prefabs/Interactive/Portals/SimplePortal/SimplePortalGold.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Epic Toon FX/Prefabs/Interactive/Portals/SimplePortal/SimplePortalPurple.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Epic Toon FX/Prefabs/Interactive/Portals/SimplePortal/SimplePortalPurple.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Epic Toon FX/Prefabs/Interactive/Portals/SpinPortal/SpinPortalBlue.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Epic Toon FX/Prefabs/Interactive/Portals/SpinPortal/SpinPortalBlue.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Epic Toon FX/Prefabs/Interactive/Portals/SpinPortal/SpinPortalPurple.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Epic Toon FX/Prefabs/Interactive/Portals/SpinPortal/SpinPortalPurple.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Epic Toon FX/Prefabs/Interactive/Portals/SwirlPortal/SwirlPortalPurple.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Epic Toon FX/Prefabs/Interactive/Portals/SwirlPortal/SwirlPortalPurple.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Epic Toon FX/Prefabs/Interactive/Portals/SwirlPortal/SwirlPortalRed.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Epic Toon FX/Prefabs/Interactive/Portals/SwirlPortal/SwirlPortalRed.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Epic Toon FX/Materials/Misc/Warnings/warn_explosive_AB.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Epic Toon FX/Materials/Misc/Warnings/warn_explosive_AB.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Configurations/Artefacts/2.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Configurations/Artefacts/2.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Source/Configurations/PlayerConfiguration.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Configurations/PlayerConfiguration.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Source/Configurations/Shop/1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Configurations/Shop/1.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Source/Configurations/Shop/2.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Configurations/Shop/2.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Source/Configurations/Shop/3.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Configurations/Shop/3.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Source/Configurations/Shop/4.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Configurations/Shop/4.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Source/Configurations/Shop/5.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Configurations/Shop/5.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Prefab/ShopSystem.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Prefab/ShopSystem.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Prefab/SlotObject.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Prefab/SlotObject.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Configurations/Shop/6.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Configurations/Shop/6.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Configurations/Shop/7.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Configurations/Shop/7.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Configurations/Shop/8.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Configurations/Shop/8.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Prefab/Coin 1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Prefab/Coin 1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Prefab/DamagePopyp.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Prefab/DamagePopyp.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Prefab/Enemy 1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Prefab/Enemy 1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Prefab/Enemy.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Prefab/Enemy.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Source/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Scenes/SampleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Scripts/Artifacts/ArtifactManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Scripts/Artifacts/ArtifactManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Scripts/Enemy/DamagePopupSpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Scripts/Enemy/DamagePopupSpawner.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Scripts/Enemy/EnemySpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Scripts/Enemy/EnemySpawner.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Scripts/Enemy/EnemyStateMachine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Scripts/Enemy/EnemyStateMachine.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Scripts/Enemy/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Scripts/Enemy/GameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Scripts/Enemy/IDamageable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Scripts/Enemy/IDamageable.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Source/Scripts/Player/CharacterParamSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Scripts/Player/CharacterParamSystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Scripts/Shop/ShopConfiguration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Scripts/Shop/ShopConfiguration.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Scripts/Shop/ShopSlot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Scripts/Shop/ShopSlot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Scripts/Player/CoinCounter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Scripts/Player/CoinCounter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Scripts/Player/PlayerConfiguration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Scripts/Player/PlayerConfiguration.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Scripts/Player/PlayerHealth.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Scripts/Player/PlayerHealth.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Scripts/Player/PlayerStateMachine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Scripts/Player/PlayerStateMachine.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Scripts/Player/PlayerWalkState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Scripts/Player/PlayerWalkState.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Source/Scripts/Shop/ShopSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Scripts/Shop/ShopSystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Sprite/ChatGPT Image 13 окт. 2025 г., 23_05_48.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Sprite/ChatGPT Image 13 окт. 2025 г., 23_05_48.png.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,8 +49,10 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Source/Scripts/Chest.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Source/Scripts/DrawingCanvas.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Source/Scripts/Enemy/EnemyAttack.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Source/Scripts/MainMenu/MainMenu.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@529b01454a55/Runtime/UGUI/UI/Core/Graphic.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo">{
@@ -161,6 +126,8 @@
       <workItem from="1760386583788" duration="2360000" />
       <workItem from="1760471822570" duration="2316000" />
       <workItem from="1760733826067" duration="4781000" />
+      <workItem from="1761157191225" duration="3100000" />
+      <workItem from="1761247982645" duration="5500000" />
     </task>
     <servers />
   </component>

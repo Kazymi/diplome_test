@@ -68,12 +68,10 @@ public class ShopSystem : MonoBehaviour
 
     private void OnPurchaseEvent(ShopSlot obj)
     {
-        reloadSlot.GetComponent<TwoObjectsAnimator>().HideSimply();
         foreach (var slot in shopSlots)
         {
             if (slot == obj)
             {
-                // Применяем артефакт, если он есть
                 if (slot.ShopConfiguration.Artifact != null && artifactManager != null)
                 {
                     artifactManager.AddArtifact(slot.ShopConfiguration.Artifact);

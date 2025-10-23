@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 5667813819908281326}
   m_Layer: 6
   m_Name: Enemy 1
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -53,6 +53,7 @@ MonoBehaviour:
   flipObject: {fileID: 5667813819908281326}
   hitEffect: {fileID: 4445933120377468974, guid: ce2921011b6dbd443bf8258de4c71d43, type: 3}
   droppedLoot: {fileID: 394324666184139425, guid: 1441aba2c2124bc41a64f52ba59722a9, type: 3}
+  chest: {fileID: 5671603122534146454, guid: be679458a571a6741ae76528ba233590, type: 3}
 --- !u!61 &7715965330077945928
 BoxCollider2D:
   m_ObjectHideFlags: 0

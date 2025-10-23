@@ -7,16 +7,18 @@ public class PlayerWalkState : State
     private readonly PlayerAnimatorController _playerAnimatorController;
     private readonly Transform _player;
     private readonly Joystick _joystick;
+    private readonly Transform _rotateObject;
     private readonly float _scale;
 
     public PlayerWalkState(CharacterParamSystem characterParamSystem, PlayerAnimatorController playerAnimatorController,
-        Transform player, Joystick joystick)
+        Transform player, Joystick joystick,Transform rotateObject)
     {
         _characterParamSystem = characterParamSystem;
         _playerAnimatorController = playerAnimatorController;
         _player = player;
         _joystick = joystick;
-        _scale = player.localScale.x;
+        _rotateObject = rotateObject;
+        _scale = rotateObject.localScale.x;
     }
 
     public override void OnStateEnter()
@@ -36,11 +38,11 @@ public class PlayerWalkState : State
         _player.position += movement;
         if (dir.x > 0.01f)
         {
-            _player.localScale = new Vector3(_scale, _scale, _scale);
+            _rotateObject.localScale = new Vector3(_scale, _scale, _scale);
         }
         else if (dir.x < -0.01f)
         {
-            _player.localScale = new Vector3(-_scale, _scale, _scale);
+            _rotateObject.localScale = new Vector3(-_scale, _scale, _scale);
         }
     }
 }

@@ -7,6 +7,7 @@ public class PlayerStateMachine : MonoBehaviour
     [SerializeField] private CharacterParamSystem characterParamSystem;
     [SerializeField] private Animator animator;
     [SerializeField] private Joystick joystick;
+    [SerializeField] private Transform rotateObject;
 
     private StateMachine.StateMachine stateMachine;
     private PlayerAnimatorController playerAnimatorController;
@@ -21,7 +22,7 @@ public class PlayerStateMachine : MonoBehaviour
         playerAnimatorController = new PlayerAnimatorController(animator);
         var idleState = new PlayerAnimationState(PlayerAnimationType.Idle, playerAnimatorController);
         var playerSpawnState = new PlayerAnimationState(PlayerAnimationType.Spawn, playerAnimatorController);
-        var playerWalkState = new PlayerWalkState(characterParamSystem, playerAnimatorController, transform, joystick);
+        var playerWalkState = new PlayerWalkState(characterParamSystem, playerAnimatorController, transform, joystick,rotateObject);
 
         playerSpawnState.AddTransition(new StateTransition(idleState,
             new TemporaryCondition(playerAnimatorController.GetAnimationDuration(PlayerAnimationType.Spawn))));

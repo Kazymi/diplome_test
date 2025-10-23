@@ -7,6 +7,7 @@ public class EnemySpawner : MonoBehaviour
     [Header("Настройки спауна")] [SerializeField]
     private GameObject enemyPrefab;
 
+    [SerializeField] private CharacterParamSystem characterParamSystem;
     [SerializeField] private float spawnRadius = 10f;
     [SerializeField] private float minDistanceToPlayer = 3f;
     [SerializeField] private Transform player;
@@ -25,7 +26,7 @@ public class EnemySpawner : MonoBehaviour
         Vector2 spawnPosition = GetDirectionalSpawnPosition();
         var enemy = Instantiate(enemyPrefab, spawnPosition, Quaternion.identity);
         var enemyState = enemy.GetComponent<EnemyStateMachine>();
-        enemyState.Initialize(player);
+        enemyState.Initialize(player, characterParamSystem);
     }
 
     public void SpawnShop()
