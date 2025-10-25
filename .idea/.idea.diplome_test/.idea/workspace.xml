@@ -6,39 +6,17 @@
   <component name="ChangeListManager">
     <list default="true" id="4d51e888-086c-448a-b2b0-e59a5fd3be69" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.diplome_test/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.diplome_test/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Epic Toon FX/Materials/Misc/Warnings/warn_explosive_AB.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Epic Toon FX/Materials/Misc/Warnings/warn_explosive_AB.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Configurations/Artefacts/2.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Configurations/Artefacts/2.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Source/Configurations/PlayerConfiguration.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Configurations/PlayerConfiguration.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Configurations/Shop/1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Configurations/Shop/1.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Configurations/Shop/2.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Configurations/Shop/2.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Configurations/Shop/3.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Configurations/Shop/3.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Configurations/Shop/4.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Configurations/Shop/4.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Configurations/Shop/5.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Configurations/Shop/5.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Configurations/Shop/6.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Configurations/Shop/6.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Configurations/Shop/7.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Configurations/Shop/7.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Configurations/Shop/8.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Configurations/Shop/8.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Prefab/Coin 1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Prefab/Coin 1.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Prefab/DamagePopyp.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Prefab/DamagePopyp.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Prefab/Enemy 1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Prefab/Enemy 1.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Prefab/Enemy.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Prefab/Enemy.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Prefab/ShopSystem.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Prefab/ShopSystem.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Prefab/SlotObject.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Prefab/SlotObject.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Source/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Scripts/Artifacts/ArtifactManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Scripts/Artifacts/ArtifactManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Scripts/Enemy/DamagePopupSpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Scripts/Enemy/DamagePopupSpawner.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Scripts/Enemy/EnemySpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Scripts/Enemy/EnemySpawner.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Scripts/Enemy/EnemyStateMachine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Scripts/Enemy/EnemyStateMachine.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Scripts/Enemy/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Scripts/Enemy/GameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Scripts/Enemy/IDamageable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Scripts/Enemy/IDamageable.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Scripts/Player/CharacterParamSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Scripts/Player/CharacterParamSystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Scripts/Player/CoinCounter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Scripts/Player/CoinCounter.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Scripts/Player/PlayerConfiguration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Scripts/Player/PlayerConfiguration.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Scripts/Player/PlayerHealth.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Scripts/Player/PlayerHealth.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Scripts/Player/PlayerStateMachine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Scripts/Player/PlayerStateMachine.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Scripts/Player/PlayerWalkState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Scripts/Player/PlayerWalkState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Scripts/Pet/PetConfiguration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Scripts/Pet/PetConfiguration.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Scripts/Pet/PetStateMachine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Scripts/Pet/PetStateMachine.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Scripts/Pet/States/PetAttackState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Scripts/Pet/States/PetAttackState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Scripts/Pet/States/PetChaseState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Scripts/Pet/States/PetChaseState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Scripts/Pet/States/PetFollowState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Scripts/Pet/States/PetFollowState.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Source/Scripts/Shop/ShopSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Scripts/Shop/ShopSystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Sprite/ChatGPT Image 13 окт. 2025 г., 23_05_48.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Sprite/ChatGPT Image 13 окт. 2025 г., 23_05_48.png.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -127,7 +105,8 @@
       <workItem from="1760471822570" duration="2316000" />
       <workItem from="1760733826067" duration="4781000" />
       <workItem from="1761157191225" duration="3100000" />
-      <workItem from="1761247982645" duration="5500000" />
+      <workItem from="1761247982645" duration="6151000" />
+      <workItem from="1761379478676" duration="851000" />
     </task>
     <servers />
   </component>

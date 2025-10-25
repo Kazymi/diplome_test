@@ -4,6 +4,7 @@ using UnityEngine;
 public class ArtifactManager : MonoBehaviour
 {
     [SerializeField] private CharacterParamSystem characterParamSystem;
+    [SerializeField] private PetParamSystem petParamSystem;
     
     private List<ArtifactConfiguration> activeArtifacts = new List<ArtifactConfiguration>();
     private Dictionary<ArtifactEffectType, float> effectValues = new Dictionary<ArtifactEffectType, float>();
@@ -156,6 +157,35 @@ public class ArtifactManager : MonoBehaviour
                 else
                     characterParamSystem.AddLuckyBonus((int)effect.Value);
                 break;
+                
+            // Эффекты для питомца (Unit)
+            case ArtifactEffectType.UnitSpeed:
+                if (effect.IsPercentage)
+                    petParamSystem.AddFollowSpeedPercentBonus(effect.Value);
+                else
+                    petParamSystem.AddFollowSpeedBonus(effect.Value);
+                break;
+                
+            case ArtifactEffectType.UnitAttackSpeed:
+                if (effect.IsPercentage)
+                    petParamSystem.AddAttackCooldownPercentBonus(-effect.Value); // Отрицательное значение для уменьшения кулдауна
+                else
+                    petParamSystem.AddAttackCooldownBonus(-effect.Value);
+                break;
+                
+            case ArtifactEffectType.UnitAttackDamage:
+                if (effect.IsPercentage)
+                    petParamSystem.AddDamagePercentBonus(effect.Value);
+                else
+                    petParamSystem.AddDamageBonus((int)effect.Value);
+                break;
+                
+            case ArtifactEffectType.UnitAttackRange:
+                if (effect.IsPercentage)
+                    petParamSystem.AddAttackRangePercentBonus(effect.Value);
+                else
+                    petParamSystem.AddAttackRangeBonus(effect.Value);
+                break;
         }
     }
     
@@ -217,6 +247,35 @@ public class ArtifactManager : MonoBehaviour
                     characterParamSystem.AddLuckyPercentBonus(-effect.Value);
                 else
                     characterParamSystem.AddLuckyBonus(-(int)effect.Value);
+                break;
+                
+            // Удаление эффектов для питомца (Unit)
+            case ArtifactEffectType.UnitSpeed:
+                if (effect.IsPercentage)
+                    petParamSystem.AddFollowSpeedPercentBonus(-effect.Value);
+                else
+                    petParamSystem.AddFollowSpeedBonus(-effect.Value);
+                break;
+                
+            case ArtifactEffectType.UnitAttackSpeed:
+                if (effect.IsPercentage)
+                    petParamSystem.AddAttackCooldownPercentBonus(effect.Value); // Положительное значение для возврата кулдауна
+                else
+                    petParamSystem.AddAttackCooldownBonus(effect.Value);
+                break;
+                
+            case ArtifactEffectType.UnitAttackDamage:
+                if (effect.IsPercentage)
+                    petParamSystem.AddDamagePercentBonus(-effect.Value);
+                else
+                    petParamSystem.AddDamageBonus(-(int)effect.Value);
+                break;
+                
+            case ArtifactEffectType.UnitAttackRange:
+                if (effect.IsPercentage)
+                    petParamSystem.AddAttackRangePercentBonus(-effect.Value);
+                else
+                    petParamSystem.AddAttackRangeBonus(-effect.Value);
                 break;
         }
     }

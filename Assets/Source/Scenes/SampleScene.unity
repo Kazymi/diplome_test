@@ -1837,6 +1837,7 @@ GameObject:
   - component: {fileID: 893163180}
   - component: {fileID: 893163182}
   - component: {fileID: 893163183}
+  - component: {fileID: 893163184}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -1856,7 +1857,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e72bff5ba51248cfa1d408095a44c7d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timer: 60
+  timer: 12
   duration: 0.8
   spawner: {fileID: 1566338844}
   waveText: {fileID: 303446383}
@@ -1904,6 +1905,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characterParamSystem: {fileID: 893163182}
+  petParamSystem: {fileID: 893163184}
+--- !u!114 &893163184
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 893163179}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4c3c091cfd606a4092a07e85362e6ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  petConfiguration: {fileID: 11400000, guid: d44416036b359714398c44e24efa991e, type: 2}
 --- !u!1 &936686538
 GameObject:
   m_ObjectHideFlags: 0

@@ -50,6 +50,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   reloadConfiguration: {fileID: 11400000, guid: 29097c5266521e64b9b1fc5eab258b06, type: 2}
+  petConfiguration: {fileID: 11400000, guid: 542f3f502a4b1eb4798fa959ae5c3ff1, type: 2}
   shopConfigurations:
   - {fileID: 11400000, guid: 3af2fe8e9d8a55b44a5326dc62e11019, type: 2}
   - {fileID: 11400000, guid: 3f6c4ef7d8bdaf047b2cfe9d61b090d4, type: 2}

@@ -3,16 +3,18 @@ using UnityEngine;
 
 public class PetAttackState : State
 {
-    private readonly PetConfiguration config;
+    private readonly PetParamSystem paramSystem;
     private readonly PetAnimatorController animatorController;
     private readonly Transform pet;
     private Transform target;
     private readonly SpriteRenderer spriteRenderer;
     private float attackWindowTimer;
+    private float lastFlipTime;
+    private const float flipCooldown = 0.1f;
 
-    public PetAttackState(PetConfiguration config, PetAnimatorController animatorController, Transform pet, Transform target)
+    public PetAttackState(PetParamSystem paramSystem, PetAnimatorController animatorController, Transform pet, Transform target)
     {
-        this.config = config;
+        this.paramSystem = paramSystem;
         this.animatorController = animatorController;
         this.pet = pet;
         this.target = target;
@@ -23,8 +25,8 @@ public class PetAttackState : State
     {
         animatorController.SetTrigger(PetAnimationType.Attack);
         attackWindowTimer = animatorController.GetAnimationDuration(PetAnimationType.Attack);
-        if (attackWindowTimer < config.AttackCooldown)
-            attackWindowTimer = config.AttackCooldown;
+        if (attackWindowTimer < paramSystem.AttackCooldown)
+            attackWindowTimer = paramSystem.AttackCooldown;
     }
 
     public void SetTarget(Transform target)
@@ -45,10 +47,19 @@ public class PetAttackState : State
     {
         if (spriteRenderer == null) return;
         
-        if (direction.x > 0.01f)
+        // Защита от быстрого переключения
+        if (Time.time - lastFlipTime < flipCooldown) return;
+
+        if (direction.x > 0.01f && spriteRenderer.flipX)
+        {
             spriteRenderer.flipX = false;
-        else if (direction.x < -0.01f)
+            lastFlipTime = Time.time;
+        }
+        else if (direction.x < -0.01f && !spriteRenderer.flipX)
+        {
             spriteRenderer.flipX = true;
+            lastFlipTime = Time.time;
+        }
     }
 
     public void OnAttackHit()
@@ -58,7 +69,7 @@ public class PetAttackState : State
         var damageable = target.GetComponent<IDamageable>();
         if (damageable != null)
         {
-            damageable.TakeDamage(config.Damage);
+            damageable.TakeDamage(paramSystem.Damage);
         }
     }
 }

@@ -3,16 +3,18 @@ using UnityEngine;
 
 public class PetChaseState : State
 {
-    private readonly PetConfiguration config;
+    private readonly PetParamSystem paramSystem;
     private readonly PetAnimatorController animatorController;
     private readonly Transform pet;
     private Transform target;
     private readonly SpriteRenderer spriteRenderer;
+    private float lastFlipTime;
+    private const float flipCooldown = 0.1f;
 
     public Transform Target => target;
-    public PetChaseState(PetConfiguration config, PetAnimatorController animatorController, Transform pet, Transform target)
+    public PetChaseState(PetParamSystem paramSystem, PetAnimatorController animatorController, Transform pet, Transform target)
     {
-        this.config = config;
+        this.paramSystem = paramSystem;
         this.animatorController = animatorController;
         this.pet = pet;
         this.target = target;
@@ -37,7 +39,7 @@ public class PetChaseState : State
     {
         if (target == null) return;
         var dir = (target.position - pet.position).normalized;
-        pet.position += dir * (config.FollowSpeed * Time.deltaTime);
+        pet.position += dir * (paramSystem.FollowSpeed * Time.deltaTime);
         UpdateFacing(dir);
     }
 
@@ -45,9 +47,18 @@ public class PetChaseState : State
     {
         if (spriteRenderer == null) return;
         
-        if (direction.x > 0.01f)
+        // Защита от быстрого переключения
+        if (Time.time - lastFlipTime < flipCooldown) return;
+
+        if (direction.x > 0.01f && spriteRenderer.flipX)
+        {
             spriteRenderer.flipX = false;
-        else if (direction.x < -0.01f)
+            lastFlipTime = Time.time;
+        }
+        else if (direction.x < -0.01f && !spriteRenderer.flipX)
+        {
             spriteRenderer.flipX = true;
+            lastFlipTime = Time.time;
+        }
     }
 }

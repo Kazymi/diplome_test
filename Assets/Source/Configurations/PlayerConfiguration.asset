@@ -27,4 +27,4 @@ MonoBehaviour:
   <DefaultRegeneration>k__BackingField: 0
   <DefaultLucky>k__BackingField: 0
   <DefaultMoneyPerLevel>k__BackingField: 0
-  <DefaultLuckyChest>k__BackingField: 25
+  <DefaultLuckyChest>k__BackingField: 10

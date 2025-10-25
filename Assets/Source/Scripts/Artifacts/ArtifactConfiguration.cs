@@ -61,8 +61,6 @@ public class ArtifactConfiguration : ScriptableObject
             ArtifactEffectType.UnitAttackDamage => "Урон юнитов",
             ArtifactEffectType.UnitSpeed => "Скорость юнитов",
             ArtifactEffectType.UnitAttackRange => "Дальность атаки юнитов",
-            ArtifactEffectType.UnitCount => "Количество юнитов",
-            ArtifactEffectType.UnitCountPercent => "Количество юнитов",
             
             // Снаряды
             ArtifactEffectType.ProjectileCount => "Количество снарядов",

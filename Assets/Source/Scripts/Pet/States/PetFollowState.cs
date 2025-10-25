@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class PetFollowState : State
 {
-    private readonly PetConfiguration config;
+    private readonly PetParamSystem paramSystem;
     private readonly PetAnimatorController animatorController;
     private readonly Transform pet;
     private readonly Transform player;
@@ -13,11 +13,13 @@ public class PetFollowState : State
     private float targetUpdateInterval = 2f;
     private Vector3 randomTargetPosition;
     private float currentTime;
+    private float lastFlipTime;
+    private const float flipCooldown = 0.1f;
 
-    public PetFollowState(PetConfiguration config, PetAnimatorController animatorController, Transform pet,
+    public PetFollowState(PetParamSystem paramSystem, PetAnimatorController animatorController, Transform pet,
         Transform player)
     {
-        this.config = config;
+        this.paramSystem = paramSystem;
         this.animatorController = animatorController;
         this.pet = pet;
         this.player = player;
@@ -53,17 +55,26 @@ public class PetFollowState : State
     private void MoveTowardsPlayer()
     {
         var dir = ((player.position + randomTargetPosition) - pet.position).normalized;
-        pet.position += dir * (config.FollowSpeed * Time.deltaTime);
+        pet.position += dir * (paramSystem.FollowSpeed * Time.deltaTime);
         UpdateFacing(dir);
     }
 
     private void UpdateFacing(Vector3 direction)
     {
         if (spriteRenderer == null) return;
+        
+        // Защита от быстрого переключения
+        if (Time.time - lastFlipTime < flipCooldown) return;
 
-        if (direction.x > 0.01f)
+        if (direction.x > 0.01f && spriteRenderer.flipX)
+        {
             spriteRenderer.flipX = false;
-        else if (direction.x < -0.01f)
+            lastFlipTime = Time.time;
+        }
+        else if (direction.x < -0.01f && !spriteRenderer.flipX)
+        {
             spriteRenderer.flipX = true;
+            lastFlipTime = Time.time;
+        }
     }
 }

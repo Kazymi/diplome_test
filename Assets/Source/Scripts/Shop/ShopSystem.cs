@@ -5,6 +5,7 @@ using UnityEngine;
 public class ShopSystem : MonoBehaviour
 {
     [SerializeField] private ShopConfiguration reloadConfiguration;
+    [SerializeField] private ShopConfiguration petConfiguration;
     [SerializeField] private ShopConfiguration[] shopConfigurations;
     [SerializeField] private ShopSlot[] shopSlots;
     [SerializeField] private ShopSlot reloadSlot;
@@ -23,7 +24,7 @@ public class ShopSystem : MonoBehaviour
         reloadSlot.OnPurchaseEvent += OnReloadPurchaseEvent;
         foreach (var shopSlot in shopSlots)
         {
-            var randomChance = GetRandomShopConfiguration();
+            var randomChance = shopSlots.Last() == shopSlot ? petConfiguration : GetRandomShopConfiguration();
             shopSlot.Initialize(randomChance);
             shopSlot.OnPurchaseEvent += OnPurchaseEvent;
         }
